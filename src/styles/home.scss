@@ -1,0 +1,14 @@
+@import 'font';
+.text{
+    font-family: raleway;
+}
+.name{
+    font-family: raleway-semibold;
+}
+
+.arrowRight{
+    transition: 0.3s ease-in;
+}
+.viewWork:hover .arrowRight{
+transform: rotate(90deg);
+}
