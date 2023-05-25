@@ -164,7 +164,12 @@ export default {
       rose: colors.rose,  
       highlight:'#e31b6d',
       bluePrimary:'#04c2c9',
-      nav:"#1b242f"
+      blueSecondary:"#00a1a7",
+      nav:"#1b242f",
+      header:"#444649",
+      text:'#616161',
+      skilsBackgraound:"#EEE"
+
     
     }),
     columns: {

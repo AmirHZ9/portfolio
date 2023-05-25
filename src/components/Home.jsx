@@ -4,7 +4,7 @@ import backGround from "../assets/background.png";
 import "../styles/home.scss";
 export default function Home() {
   return (
-    <div className="h-screen relative">
+    <div className="h-[100vh] relative">
       <img
         src={backGround}
         alt="background"
@@ -12,7 +12,7 @@ export default function Home() {
       />
       <div className="absolute top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]">
         <div className="mb-5">
-          <p className="text text-4xl text-white text-center">
+          <p className=" text-4xl text-white text-center">
             Hello, I'm
             <span className=" name text-highlight ml-3">
               Amirhossein Zanganeh
@@ -23,7 +23,7 @@ export default function Home() {
           </p>
         </div>
         <div className="viewWork text-center ">
-          <button className="text border-2 text-white py-3 px-5 hover:bg-bluePrimary hover:border-bluePrimary flex m-auto duration-300">
+          <button className=" border-2 text-white py-3 px-5 hover:bg-bluePrimary hover:border-bluePrimary flex m-auto duration-300">
             View my Work
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="arrowRight w-6 h-6 ml-4">
@@ -32,12 +32,12 @@ export default function Home() {
             </button>
         </div>
       </div>
-      <div className="bg-nav border-b-4 border-bluePrimary h-[50px]">
-        <ul className="text flex w-100  items-center max-w-7xl h-full text-white">
-            <li className="mx-20 cursor-pointer hover:text-highlight duration-300">HOME</li>
-            <li className="mx-20 cursor-pointer hover:text-highlight duration-300">ABOUT</li>
-            <li className="mx-20 cursor-pointer hover:text-highlight duration-300">PROJECT</li>
-            <li className="mx-20 cursor-pointer hover:text-highlight duration-300">CONTACT</li>
+      <div className=" bg-nav border-b-4 border-bluePrimary h-[50px]">
+        <ul className="hidden md:flex  items-center w-full max-w-7xl h-full text-white">
+            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">HOME</li>
+            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">ABOUT</li>
+            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">PROJECT</li>
+            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">CONTACT</li>
         </ul>
 
       </div>

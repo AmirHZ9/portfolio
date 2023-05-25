@@ -1,14 +1,71 @@
 @import 'font';
-.text{
+body{
     font-family: raleway;
 }
 .name{
     font-family: raleway-semibold;
 }
-
+.bold{
+    font-family: raleway-bold;
+}
 .arrowRight{
     transition: 0.3s ease-in;
 }
 .viewWork:hover .arrowRight{
 transform: rotate(90deg);
+}
+
+
+.hex-wrap{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.hexagon{
+    height: 100%;
+width: calc(100% * 0.57735);
+background-color: #04c2c9;
+display: inline-block;
+
+
+}
+.hexagon::after{
+    content:'';
+    height: 100%;
+    width: calc(100% * 0.57735);
+    background-color: #04c2c9;
+    display: inline-block;
+    transform: rotateZ(60deg);
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+}
+.hexagon::before{
+    content:'';
+    height: 100%;
+    width: calc(100% * 0.57735);
+    background-color: #04c2c9;
+    display: inline-block;
+    transform: rotateZ(-60deg);
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+}
+
+.skils{
+    font-family:  raleway-bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    width: 110px !important;
+    height: 100%;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color: #04c2c9;
 }
