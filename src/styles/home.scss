@@ -68,4 +68,30 @@ display: inline-block;
     align-items: center;
     font-size: 14px;
     background-color: #04c2c9;
+    
+}
+
+.octagon {
+    height: 15em;
+    position: relative;
+    overflow: hidden;
+    width: 15em;
+}
+
+.octagon:after {
+    background: url('../assets/amirhossein.jpg');
+    object-fit: contain;
+    background-position: center;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+
+  -webkit-transform: rotate(45deg); 
+     -moz-transform: rotate(45deg); 
+      -ms-transform: rotate(45deg); 
+       -o-transform: rotate(45deg); 
+          transform: rotate(45deg); 
+
 }

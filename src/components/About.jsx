@@ -123,11 +123,10 @@ export default function About() {
       </div>
       <div className="skills flex flex-col justify-center items-center lg:flex-row">
         <div className="flex flex-col  items-start justify-center w-full h-full px-[50px] mb-8  mx-8">
+          <div className="w-full flex justify-center">
+            <div className="octagon"></div>
+          </div>
 
-
-            <img src={img} alt="image" className="h-[250px] m-auto"/>
-
-         
           <div className="text-center text-text">
             <p className="bold  text-2xl mt-5 mb-4">who's this guy?</p>
             <p>
