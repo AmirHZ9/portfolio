@@ -22,8 +22,8 @@ export default function Home() {
             I'm a Frontend web developer.
           </p>
         </div>
-        <div className="viewWork text-center ">
-          <button className=" border-2 text-white py-3 px-5 hover:bg-bluePrimary hover:border-bluePrimary flex m-auto duration-300">
+        <div className=" text-center ">
+          <button className="viewWork border-2 text-white py-3 px-5 hover:bg-bluePrimary hover:border-bluePrimary flex m-auto duration-300">
             View my Work
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="arrowRight w-6 h-6 ml-4">
