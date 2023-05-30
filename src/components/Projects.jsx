@@ -16,7 +16,7 @@ console.log({data})
         <li className='cursor-pointer mx-6 px-10 font-semibold'>ReactJS</li>
     </ul>
    </div>
-   <div className='flex justify-center mt-6'>
+   <div className='flex flex-col flex-wrap items-center sm:flex-row justify-center mt-6 max-w-[1200px] mx-auto'>
 
       {
         loading ? "" :
@@ -25,7 +25,7 @@ console.log({data})
           <div key={item.id}>
           <a href={item.url}>
 
-              <img src={item.projectCover.url} alt=""  className="w-80"/>
+              <img src={item.projectCover.url} alt=""  className="h-[240px] w-[calc(50vw-8px)] sm:h-[300px] md:w-[390px] object-cover"/>
           </a>
           </div>
             )
