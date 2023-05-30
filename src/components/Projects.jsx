@@ -16,6 +16,8 @@ console.log({data})
         <li className='cursor-pointer mx-6 px-10 font-semibold'>ReactJS</li>
     </ul>
    </div>
+   <div className='flex justify-center mt-6'>
+
       {
         loading ? "" :
         data.projects.map(item =>
@@ -29,6 +31,7 @@ console.log({data})
             )
           
       }
+   </div>
     </div>
   )
 }

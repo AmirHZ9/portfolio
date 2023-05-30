@@ -168,7 +168,10 @@ export default {
       nav:"#1b242f",
       header:"#444649",
       text:'#616161',
-      skilsBackgraound:"#EEE"
+      skilsBackgraound:"#EEE",
+      contact:"#252934",
+      inputbg:"#1e242c"
+      
 
     
     }),
