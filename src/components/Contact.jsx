@@ -12,7 +12,7 @@ export default function Contact() {
         <input type="text" placeholder='Name'  required className='py-2 px-4 w-full  block outline-none bg-inputbg mb-2'/>
         <input type="text" placeholder='Email' required className='py-2 px-4 w-full  block outline-none bg-inputbg mb-2'/>
         <textarea name="" id="" cols="30" rows="10" required placeholder='Your Message' className='py-2 px-4  w-full block outline-none bg-inputbg mb-2'></textarea>
-        <button className='border-2 block px-7 py-2 float-right '>Submit</button>
+        <button className='border-2 block px-7 py-2 float-right hover:bg-bluePrimary hover:border-bluePrimary duration-300'>Submit</button>
       </form>
     </div>
   )
