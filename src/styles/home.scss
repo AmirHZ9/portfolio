@@ -95,3 +95,23 @@ display: inline-block;
           transform: rotate(45deg); 
 
 }
+
+.contact{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    line-height: 55px;
+   font-size: 24px;
+    background-color: #262f38;
+    margin-right: 15px;
+
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+
+}
+.contact:hover{
+    background-color: #04c2c9;
+}
