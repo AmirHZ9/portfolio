@@ -1,8 +1,42 @@
-import React from "react";
+import React ,{useEffect,useRef,useState} from "react";
 // BackGround
 import backGround from "../assets/background.png";
+import About from "./About";
 import "../styles/home.scss";
 export default function Home() {
+  const [hamburgerMenu , setHamburgerMenu] = useState(false)
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    window.onscroll = () => {
+      if (window.pageYOffset < 1000) {
+        setShow(false);
+ 
+      } else {
+        setShow(true);
+      }
+    };
+ 
+  });
+;
+const showMenu = () =>{
+  setHamburgerMenu(!hamburgerMenu)
+  console.log(hamburgerMenu)
+}
+
+const scrollToTopic = (event) =>{
+  const name = event.target.attributes.name.value
+  switch(name){
+    case "home":
+      window.scrollTo({top:0,behavior:"smooth"}) 
+    break
+    case "about":
+ 
+    
+break
+  }
+  
+  console.log(name)
+}
   return (
     <div className="h-[100vh] relative">
       <img
@@ -32,15 +66,30 @@ export default function Home() {
             </button>
         </div>
       </div>
-      <div className=" bg-nav border-b-4 border-bluePrimary h-[50px]">
-        <ul className="hidden md:flex  items-center w-full max-w-7xl h-full text-white">
-            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">HOME</li>
-            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">ABOUT</li>
-            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">PROJECT</li>
-            <li className="mx-5 cursor-pointer hover:text-highlight duration-300">CONTACT</li>
+      <div className={` bg-nav border-b-4 border-bluePrimary h-[50px] ${show ? 'fixed top-0 left-0 w-full z-50' : "relative"}`}>
+        <ul className="hidden  md:flex  items-center  max-w-7xl h-full text-white">
+            <li  className="mx-5 cursor-pointer hover:text-highlight duration-300" name="home" onClick={scrollToTopic}>HOME</li>
+            <li  className="mx-5 cursor-pointer hover:text-highlight duration-300" name="about" onClick={scrollToTopic}>ABOUT</li>
+            <li  className="mx-5 cursor-pointer hover:text-highlight duration-300" name="project" onClick={scrollToTopic}>PROJECT</li>
+            <li  className="mx-5 cursor-pointer hover:text-highlight duration-300" name="contact" onClick={scrollToTopic}>CONTACT</li>
+        </ul>
+        <div onClick={showMenu} className=" absolute top-1/2 right-2 translate-y-[-50%]  cursor-pointer md:hidden">
+
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-8 h-8 text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+        <div className={``}>
+        <ul className={`  max-w-7xl text-white absolute top-[50px] w-full  items-center  bg-[#333] duration-300 overflow-hidden ${hamburgerMenu ? ' h-[160px]' : 'h-0 '} md:hidden` }>
+            <li className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">HOME</li>
+            <li className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">ABOUT</li>
+            <li className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">PROJECT</li>
+            <li className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">CONTACT</li>
         </ul>
 
+        </div>
       </div>
+      
     </div>
   );
 }

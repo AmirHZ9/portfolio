@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client'
 import {projects} from "../graphql/queries.js"
 export default function Projects() {
 const {loading , data , error} = useQuery(projects)
-console.log({data})
+
   return (
     <div className='bg-[#f5f5f5] pt-[100px] pb-[130px]'>
         <div className='bold text-center text-7xl text-header'>PROJECTS</div>

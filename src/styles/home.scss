@@ -1,6 +1,7 @@
 @import 'font';
 body{
     font-family: raleway;
+
 }
 .name{
     font-family: raleway-semibold;
@@ -95,7 +96,11 @@ display: inline-block;
           transform: rotate(45deg); 
 
 }
-
+#nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
 .contact{
     display: flex;
     justify-items: center;

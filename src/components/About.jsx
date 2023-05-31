@@ -197,6 +197,13 @@ export default function About() {
             <li className="relative bg-skilsBackgraound w-full  mb-4 flex items-center h-7 ">
               <div className="absolute left-0 top-0 h-full bg-blueSecondary w-8/12 ">
                 <div className="skils">
+                  <span>GraphQL</span>
+                </div>
+              </div>
+            </li>
+            <li className="relative bg-skilsBackgraound w-full  mb-4 flex items-center h-7 ">
+              <div className="absolute left-0 top-0 h-full bg-blueSecondary w-8/12 ">
+                <div className="skils">
                   <span>RestApi</span>
                 </div>
               </div>
