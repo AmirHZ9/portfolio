@@ -5,11 +5,9 @@ import "../styles/home.scss";
 export default function Home({ about, contact, project }) {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const [show, setShow] = useState(false);
-
-
   useEffect(() => {
     window.onscroll = () => {
-      if (window.pageYOffset < 1000) { 
+      if (window.pageYOffset < 1000) {
         setShow(false);
       } else {
         setShow(true);
@@ -24,24 +22,18 @@ export default function Home({ about, contact, project }) {
     switch (name) {
       case "home":
         window.scrollTo({ top: 0, behavior: "smooth" });
-        // setHighlight({ home: true });
-
         break;
       case "work":
         about.current.scrollIntoView({ behavior: "smooth" });
         break;
       case "about":
         about.current.scrollIntoView({ behavior: "smooth" });
-        // setHighlight({ about: true });
- 
         break;
       case "project":
         project.current.scrollIntoView({ behavior: "smooth" });
-        // setHighlight({ project: true });
         break;
       case "contact":
         contact.current.scrollIntoView({ behavior: "smooth" });
-        // setHighlight({ contact: true });
         break;
     }
   };
@@ -89,8 +81,8 @@ export default function Home({ about, contact, project }) {
         </div>
       </div>
       <div
-        className={` bg-nav border-b-4 border-bluePrimary h-[50px] ${
-          show ? "fixed top-0 left-0 w-full z-50" : "relative"
+        className={`bg-nav border-b-4 border-bluePrimary h-[50px] ${
+          show ? "fixed top-0 left-0  w-screen z-50" : "relative"
         }`}
       >
         <ul className="hidden  md:flex  items-center  max-w-7xl h-full text-white">
@@ -125,7 +117,7 @@ export default function Home({ about, contact, project }) {
         </ul>
         <div
           onClick={showMenu}
-          className=" absolute top-1/2 right-2 translate-y-[-50%]  cursor-pointer md:hidden"
+          className=" absolute  top-1/2 right-2 translate-y-[-50%]  cursor-pointer md:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -142,9 +134,9 @@ export default function Home({ about, contact, project }) {
             />
           </svg>
         </div>
-        <div className={``}>
+        <div>
           <ul
-            className={`  max-w-7xl text-white absolute top-[50px] w-full  items-center  bg-[#333] duration-300 overflow-hidden ${
+            className={`max-w-7xl text-white absolute top-[50px] w-full  items-center  bg-[#333] duration-300 overflow-hidden ${
               hamburgerMenu ? " h-[160px]" : "h-0 "
             } md:hidden`}
           >

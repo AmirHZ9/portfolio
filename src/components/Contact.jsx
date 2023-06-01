@@ -1,37 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useMutation } from "@apollo/client";
-import Aos from "aos";
-import "aos/dist/aos.css";
+
 import { sendMessage } from "../graphql/mutation";
 export default function Contact(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
-  const [Error, setError] = useState(true)
+  const [Error, setError] = useState(true);
 
   const [sendEmail, { loading, data, error }] = useMutation(sendMessage, {
     variables: {
-      name:name,
-      email:email,
-      text:text,
+      name: name,
+      email: email,
+      text: text,
     },
   });
   const sendHandler = () => {
     if (name && email && text) {
       sendEmail();
-      setError(false)
-      setEmail('')
-      setName('')
-      setText('')
+      setError(false);
+      setEmail("");
+      setName("");
+      setText("");
     } else {
-      setError(true)
+      setError(true);
     }
   };
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-    });
-  }, []);
+
   return (
     <div
       id="contact"
@@ -39,20 +34,12 @@ export default function Contact(props) {
       className="flex flex-col justify-center w-full items-center  bg-contact text-white mx-auto pt-[175px] pb-[130px]"
     >
       <div className="flex flex-col justify-center w-full max-w-[1200px] items-center  mx-auto ">
-        <div className="bold text-center text-5xl " data-aos="fade-right">
-          CONTACT
-        </div>
+        <div className="bold text-center text-5xl ">CONTACT</div>
         <div className="bg-white w-[110px] h-1 m-auto mt-[25px] mb-10"></div>
-        <div
-          className="text-bluePrimary font-semibold text-center "
-          data-aos="fade-left"
-        >
+        <div className="text-bluePrimary font-semibold text-center ">
           Have a question or want to work together?
         </div>
-        <div
-          className=" mt-10 mx-auto min-w-[95%] sm:min-w-[500px]"
-          data-aos="fade-up"
-        >
+        <div className=" mt-10 mx-auto min-w-[95%] sm:min-w-[500px]">
           <input
             type="text"
             placeholder="Name"
@@ -82,9 +69,11 @@ export default function Contact(props) {
             placeholder="Your Message"
             className="py-2 px-4  w-full block outline-none bg-inputbg mb-2"
           ></textarea>
-         {Error == false && <div className="text-sm text-bluePrimary">
-            Your Message send Successfuly.
-          </div>}
+          {Error == false && (
+            <div className="text-sm text-bluePrimary">
+              Your Message send Successfuly.
+            </div>
+          )}
           <button
             className="border-2 block px-7 py-2 float-right hover:bg-bluePrimary hover:border-bluePrimary duration-300"
             onClick={sendHandler}
