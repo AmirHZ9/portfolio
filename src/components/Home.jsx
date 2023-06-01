@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 // BackGround
 import backGround from "../assets/background.png";
 import "../styles/home.scss";
-export default function Home() {
+export default function Home({ about, contact, project }) {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const [show, setShow] = useState(false);
-  const about = document.getElementById('about')
-  const project = document.getElementById('project')
-  const contact = document.getElementById('contact')
+
 
   useEffect(() => {
     window.onscroll = () => {
-      if (window.pageYOffset < 1000) {
+      if (window.pageYOffset < 1000) { 
         setShow(false);
       } else {
         setShow(true);
@@ -20,23 +18,30 @@ export default function Home() {
   });
   const showMenu = () => {
     setHamburgerMenu(!hamburgerMenu);
-    console.log(hamburgerMenu);
   };
-
   const scrollToTopic = (event) => {
     const name = event.target.attributes.name.value;
     switch (name) {
       case "home":
         window.scrollTo({ top: 0, behavior: "smooth" });
+        // setHighlight({ home: true });
+
+        break;
+      case "work":
+        about.current.scrollIntoView({ behavior: "smooth" });
         break;
       case "about":
-        about.scrollIntoView({behavior:"smooth"})
+        about.current.scrollIntoView({ behavior: "smooth" });
+        // setHighlight({ about: true });
+ 
         break;
       case "project":
-        project.scrollIntoView({behavior:"smooth"})
+        project.current.scrollIntoView({ behavior: "smooth" });
+        // setHighlight({ project: true });
         break;
       case "contact":
-        contact.scrollIntoView({behavior:"smooth"})
+        contact.current.scrollIntoView({ behavior: "smooth" });
+        // setHighlight({ contact: true });
         break;
     }
   };
@@ -59,14 +64,20 @@ export default function Home() {
             I'm a Frontend web developer.
           </p>
         </div>
-        <div className=" text-center ">
-          <button className="viewWork border-2 text-white py-3 px-5 hover:bg-bluePrimary hover:border-bluePrimary flex m-auto duration-300">
+        <div className=" text-center">
+          <button
+            name="work"
+            onClick={scrollToTopic}
+            className="viewWork border-2 text-white py-3 px-5 hover:bg-bluePrimary hover:border-bluePrimary flex m-auto duration-300 outline-none"
+          >
             View my Work
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
               className="arrowRight w-6 h-6 ml-4"
+              name="work"
+              onClick={scrollToTopic}
             >
               <path
                 fillRule="evenodd"
@@ -84,28 +95,28 @@ export default function Home() {
       >
         <ul className="hidden  md:flex  items-center  max-w-7xl h-full text-white">
           <li
-            className="mx-5 cursor-pointer hover:text-highlight duration-300"
+            className={`mx-5 cursor-pointer hover:text-highlight duration-300 `}
             name="home"
             onClick={scrollToTopic}
           >
             HOME
           </li>
           <li
-            className="mx-5 cursor-pointer hover:text-highlight duration-300"
+            className={`mx-5 cursor-pointer hover:text-highlight duration-300 `}
             name="about"
             onClick={scrollToTopic}
           >
             ABOUT
           </li>
           <li
-            className="mx-5 cursor-pointer hover:text-highlight duration-300"
+            className={`mx-5 cursor-pointer hover:text-highlight duration-300 `}
             name="project"
             onClick={scrollToTopic}
           >
             PROJECT
           </li>
           <li
-            className="mx-5 cursor-pointer hover:text-highlight duration-300"
+            className={`mx-5 cursor-pointer hover:text-highlight duration-300 `}
             name="contact"
             onClick={scrollToTopic}
           >
@@ -137,16 +148,32 @@ export default function Home() {
               hamburgerMenu ? " h-[160px]" : "h-0 "
             } md:hidden`}
           >
-            <li onClick={scrollToTopic} name="home" className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">
+            <li
+              onClick={scrollToTopic}
+              name="home"
+              className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300"
+            >
               HOME
             </li>
-            <li onClick={scrollToTopic} name="about" className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">
+            <li
+              onClick={scrollToTopic}
+              name="about"
+              className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300"
+            >
               ABOUT
             </li>
-            <li onClick={scrollToTopic} name="project" className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">
+            <li
+              onClick={scrollToTopic}
+              name="project"
+              className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300"
+            >
               PROJECT
             </li>
-            <li onClick={scrollToTopic} name="contact" className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300">
+            <li
+              onClick={scrollToTopic}
+              name="contact"
+              className="mx-5 my-3 cursor-pointer hover:text-highlight duration-300"
+            >
               CONTACT
             </li>
           </ul>
