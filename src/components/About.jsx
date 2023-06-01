@@ -2,7 +2,7 @@ import React from "react";
 import img from "../assets/background.png";
 export default function About() {
   return (
-    <div className="pt-[100px] pb-[130px] max-w-[1200px] m-auto">
+    <div className="pt-[100px] pb-[130px] max-w-[1200px] m-auto" id="about">
       <div className="bold text-center text-7xl text-header">ABOUT</div>
       <div className="bg-header w-[70px] h-1 m-auto mt-[25px] mb-[100px]"></div>
       <div className="flex justify-center items-center  text-header">
