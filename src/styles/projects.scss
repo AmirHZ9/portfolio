@@ -1,0 +1,54 @@
+.projectsItem {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.projectItemLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.projectsItem:hover .projectItemLink {
+  opacity: 1;
+}
+
+.projectInfo {
+  position: absolute;
+  font-family: bold;
+  font-size: 21px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  span {
+    color: #e31b6d;
+    font-size: 16px;
+    font-family: raleway;
+  }
+}
+.projectLink {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  border: 2px solid #e31b6d;
+  padding: 7px 15px;
+  font-size: 17px;
+}
+.projectLink:hover{
+    color: white;
+    background-color: #e31b6d;
+}
+.projectsItem:hover .projectInfo {
+  top: 50px;
+}
+.projectsItem:hover .projectLink {
+  bottom: 50px;
+}
