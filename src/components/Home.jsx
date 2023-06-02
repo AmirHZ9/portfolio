@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // BackGround
-import backGround from "../assets/background.png";
+import backGround from "../assets/background.jpg";
 import "../styles/home.scss";
 export default function Home({ about, contact, project }) {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);

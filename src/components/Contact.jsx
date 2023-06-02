@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useMutation } from "@apollo/client";
-
 import { sendMessage } from "../graphql/mutation";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 export default function Contact(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,20 +27,24 @@ export default function Contact(props) {
       setError(true);
     }
   };
-
+  useEffect(()=>{
+    Aos.init({
+    duration:1000
+    })
+    },[])
   return (
     <div
       id="contact"
       ref={props.carRef}
-      className="flex flex-col justify-center w-full items-center  bg-contact text-white mx-auto pt-[175px] pb-[130px]"
+      className="flex flex-col justify-center w-full items-center overflow-hidden  bg-contact text-white mx-auto pt-[175px] pb-[130px]"
     >
       <div className="flex flex-col justify-center w-full max-w-[1200px] items-center  mx-auto ">
-        <div className="bold text-center text-5xl ">CONTACT</div>
+        <div className="bold text-center text-5xl " data-aos="fade-left">CONTACT</div>
         <div className="bg-white w-[110px] h-1 m-auto mt-[25px] mb-10"></div>
-        <div className="text-bluePrimary font-semibold text-center ">
+        <div className="text-bluePrimary font-semibold text-center "  data-aos="fade-right">
           Have a question or want to work together?
         </div>
-        <div className=" mt-10 mx-auto min-w-[95%] sm:min-w-[500px]">
+        <div className=" mt-10 mx-auto min-w-[95%] sm:min-w-[500px]"  data-aos="fade-up">
           <input
             type="text"
             placeholder="Name"

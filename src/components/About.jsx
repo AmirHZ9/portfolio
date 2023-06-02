@@ -1,12 +1,17 @@
 import React, {  useEffect } from "react";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 export default function About(props) {
-
+  useEffect(()=>{
+    Aos.init({
+    duration:1000
+    })
+    },[])
   return (
-    <div className="pt-[100px] pb-[130px] max-w-[1200px] m-auto" id="about" ref={props.carRef} >
-      <div className="bold text-center text-3xl md:text-7xl text-header" >ABOUT</div>
+    <div className="pt-[100px] pb-[130px] max-w-[1200px] m-auto overflow-hidden" id="about" ref={props.carRef} >
+      <div className="bold text-center text-3xl md:text-7xl text-header" data-aos="fade-left">ABOUT</div>
       <div className="bg-header w-[70px] h-1 m-auto mt-[25px] mb-[100px]" ></div>
-      <div className="flex justify-center items-center  text-header" >
+      <div className="flex justify-center items-center  text-header" data-aos="fade-up">
         <div className="flex flex-col lg:flex-row justify-center items-center px-[15px] text-text mt-5 mb-2">
           <div className="px-[10px]  h-60">
             <div className="hex-wrap m-auto">
@@ -122,13 +127,13 @@ export default function About(props) {
           </div>
         </div>
       </div>
-      <div className="skills flex flex-col justify-center items-center lg:flex-row">
-        <div className="flex flex-col  items-start justify-center w-full h-full px-[50px] mb-8  mx-8" >
+      <div className="skills flex flex-col justify-center items-center lg:flex-row" >
+        <div className="flex flex-col  items-start justify-center w-full h-full px-[50px] mb-8  mx-8" data-aos="fade-right">
           <div className="w-full flex justify-center">
             <div className="octagon"></div>
           </div>
 
-          <div className="text-center text-text">
+          <div className="text-center text-text" >
             <p className="bold  text-2xl mt-5 mb-4">who's this guy?</p>
             <p>
               I'm a Front-End Developer for ChowNow in Los Angeles, CA. I have
@@ -137,7 +142,7 @@ export default function About(props) {
             </p>
           </div>
         </div>
-        <div className="w-full  mb-8" >
+        <div className="w-full  mb-8" data-aos="fade-left" >
           <ul className="flex flex-col justify-between h-full mx-8">
             <li className="relative bg-skilsBackgraound w-full  mb-4 flex items-center h-7 ">
               <div className="absolute left-0 top-0 h-full bg-blueSecondary w-11/12 ">
