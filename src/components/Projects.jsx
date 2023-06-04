@@ -30,19 +30,7 @@ export default function Projects(props) {
 
       <div className="bg-header w-[70px] h-1 m-auto mt-[25px] mb-[100px]"></div>
 
-      <div>
-        <ul className="flex justify-center m-auto text-text" data-aos="fade">
-          <li className="cursor-pointer mx-6 px-5 md:px-10 text-xs md:text-base font-semibold bg-highlight text-white">
-            ALL
-          </li>
-          <li className="cursor-pointer mx-6 px-5 md:px-10 text-xs md:text-base font-semibold">
-            JS
-          </li>
-          <li className="cursor-pointer mx-6 px-5 md:px-10 text-xs md:text-base font-semibold">
-            ReactJS
-          </li>
-        </ul>
-      </div>
+      
       <div className="flex flex-col flex-wrap items-center sm:flex-row justify-center mt-6 max-w-[1200px] mx-auto">
         {loading
           ? ""
@@ -75,7 +63,7 @@ export default function Projects(props) {
         <div>
           <div
             onClick={() => setShow(false)}
-            className={`fixed top-0 left-0 w-full h-screen bg-[rgba(0,0,0,0.6)] z-40 ${
+            className={`fixed top-0 left-0 w-full h-screen bg-[rgba(0,0,0,0.6)] z-50 ${
               show ? "block" : "hidden"
             }`}
           ></div>

@@ -26,7 +26,7 @@ export default function Details({ id, setShow }) {
             <a
               href={data.project.url}
               target="_blank"
-              className="text-white bg-highlight py-2 px-8 text-sm font-semibold"
+              className="text-white bg-highlight py-2 px-8 text-sm font-semibold hover:text-highlight hover:bg-white duration-300"
             >
               VIEW SITE
             </a>
