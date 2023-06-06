@@ -19,7 +19,7 @@ export default function Details({ id, setShow }) {
             <p className="bold text-3xl text-[#444]">{data.project.name}</p>
             <span className="text-highlight">{data.project.tech}</span>
           </div>
-          <div className="m-6 h-32 overflow-scroll">
+          <div className="m-6 h-32 overflow-y-auto">
             <p>{data.project.description}</p>
           </div>
           <div className="flex justify-between items-center m-6">
