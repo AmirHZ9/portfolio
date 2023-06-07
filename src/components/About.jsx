@@ -136,7 +136,7 @@ export default function About(props) {
           <div className="text-center text-text" >
             <p className="bold  text-2xl mt-5 mb-4">who's this guy?</p>
             <p>
-            Front-end junior developer with strong skills in HTML, CSS, and JavaScript. Proficient in React. Fast learner, detail-oriented, and committed to writing clean code. Seeking employment opportunities to contribute to innovative projects.
+            Front-end junior developer with strong in HTML, CSS, and JavaScript. Proficient in React. Fast learner, detail-oriented, and committed to writing clean code. Seeking employment opportunities to contribute to innovative projects.
             </p>
           </div>
         </div>
