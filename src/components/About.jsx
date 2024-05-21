@@ -1,6 +1,7 @@
 import React, {  useEffect } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css'
+import img from "../assets/background.jpg"
 export default function About(props) {
   useEffect(()=>{
     Aos.init({
@@ -130,7 +131,9 @@ export default function About(props) {
       <div className="skills flex flex-col justify-center items-center lg:flex-row" >
         <div className="flex flex-col  items-start justify-center w-full h-full px-[50px] mb-8  mx-8" data-aos="fade-right">
           <div className="w-full flex justify-center">
-            <div className="octagon"></div>
+            <div className="octagon">
+              
+            </div>
           </div>
 
           <div className="text-center text-text" >
@@ -188,6 +191,13 @@ export default function About(props) {
               <div className="absolute left-0 top-0 h-full bg-blueSecondary w-9/12 ">
                 <div className="skils">
                   <span>React</span>
+                </div>
+              </div>
+            </li>
+            <li className="relative bg-skilsBackgraound w-full  mb-4 flex items-center h-7 ">
+              <div className="absolute left-0 top-0 h-full bg-blueSecondary w-8/12 ">
+                <div className="skils">
+                  <span>Reactquery</span>
                 </div>
               </div>
             </li>

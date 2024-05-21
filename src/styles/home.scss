@@ -1,4 +1,5 @@
 @import 'font';
+
 body{
     font-family: raleway;
 
@@ -29,6 +30,7 @@ transform: rotate(90deg);
 width: calc(100% * 0.57735);
 background-color: #04c2c9;
 display: inline-block;
+
 
 
 }
@@ -77,6 +79,7 @@ display: inline-block;
     position: relative;
     overflow: hidden;
     width: 15em;
+    rotate: -45deg;
 }
 
 .octagon:after {
@@ -87,6 +90,10 @@ display: inline-block;
     height: 100%;
     position: absolute;
     width: 100%;
+    background-image:url('../assets/amirhossein.jpg');
+
+    background-size: cover;
+
 
 
   -webkit-transform: rotate(45deg); 
