@@ -15,6 +15,12 @@ export default function Projects(props) {
       duration: 1000,
     });
   }, []);
+
+  useEffect(()=>{
+    show ?document.body.style.overflowY = "hidden"
+    :document.body.style.overflowY = "scroll"
+
+  },[show])
   return (
     <div
       id="project"
@@ -68,7 +74,7 @@ export default function Projects(props) {
             }`}
           ></div>
           <div
-            className={`fixed top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] bg-white w-11/12 md:max-w-[700px]  z-50 ${
+            className={`fixed top-1/2 left-1/2 max-h-[90%] overflow-auto translate-x-[-50%] translate-y-[-50%] bg-white w-11/12 md:max-w-[700px]  z-50 ${
               show ? "block" : "hidden"
             }`}
           >
