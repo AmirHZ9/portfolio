@@ -9,10 +9,12 @@ export default function Projects(props) {
   const { loading, data } = useQuery(projects);
   const [show, setShow] = useState(false);
   const [id, setId] = useState("");
-  console.log(show);
+
+  Aos.init();
   useEffect(() => {
     Aos.init({
       duration: 1000,
+      once:true,
     });
   }, []);
 
@@ -21,6 +23,7 @@ export default function Projects(props) {
     :document.body.style.overflowY = "scroll"
 
   },[show])
+ 
   return (
     <div
       id="project"
@@ -41,7 +44,7 @@ export default function Projects(props) {
         {loading
           ? ""
           : data.projects.map((item) => (
-              <div className="projectsItem" key={item.id} >
+              <div className="projectsItem" key={item.id}  data-aos="fade-down-left">
                 <img
                   src={item.projectCover.url}
                   alt={item.name}
